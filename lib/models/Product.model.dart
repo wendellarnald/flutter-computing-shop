@@ -15,3 +15,24 @@ class Product {
     this.color,
   });
 }
+
+List<Product> products = [
+  Product(
+    id: 1,
+    title: "Mouse",
+    price: 80,
+    size: 5,
+    description: "",
+    image: "",
+    color: Colors.deepPurple,
+  ),
+  Product(
+    id: 2,
+    title: "Keyboard",
+    price: 110,
+    size: 10,
+    description: "",
+    image: "",
+    color: Colors.deepOrange,
+  ),
+];
