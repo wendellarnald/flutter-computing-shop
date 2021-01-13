@@ -1,6 +1,6 @@
 # Computing Shop
 
-
+Create a shop layout with gamer items.
 
 ## Author
 
