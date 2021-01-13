@@ -37,4 +37,23 @@ List<Product> products = [
     image: "assets/images/desktop.png",
     color: Colors.deepOrange,
   ),
+  Product(
+    id: 2,
+    title: "Headphones Gaming HYPERX Cloud II",
+    price: 1100,
+    size: 99,
+    description:
+        "Headphones Gaming HYPERX Cloud II (Wired - With Microphone - Red)",
+    image: "assets/images/Headphones.png",
+    color: Colors.yellowAccent,
+  ),
+  Product(
+    id: 2,
+    title: "Mouse Pad Rog",
+    price: 1100,
+    size: 100,
+    description: "Mouse Pad Gaming ASUS Rog Sheath XXL",
+    image: "assets/images/MousePad.png",
+    color: Colors.blueAccent,
+  ),
 ];
