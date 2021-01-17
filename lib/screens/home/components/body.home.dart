@@ -58,14 +58,14 @@ class __CategoriesState extends State<Categories> {
             categories[index],
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: textColor,
+              color: selectedIndex == index ? textColor : textLightColor,
             ),
           ),
           Container(
             margin: EdgeInsets.only(top: defaultPadding / 4),
             height: 2,
             width: 30,
-            color: Colors.black,
+            color: selectedIndex == index ? Colors.black : Colors.transparent,
           )
         ],
       ),
