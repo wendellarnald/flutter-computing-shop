@@ -25,7 +25,7 @@ List<Product> products = [
     description:
         "Monitor Gaming AOC 24G2U/BK (24'' - 1 ms - 144 Hz - IPS - FreeSync)",
     image: "assets/images/Screen.png",
-    color: Colors.deepPurple,
+    color: Colors.red,
   ),
   Product(
     id: 2,
