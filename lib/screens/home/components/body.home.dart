@@ -12,13 +12,6 @@ class Body extends StatelessWidget {
           padding: const EdgeInsets.symmetric(
             horizontal: defaultPadding,
           ),
-          child: Text(
-            "Tech",
-            style: Theme.of(context)
-                .textTheme
-                .headline5
-                .copyWith(fontWeight: FontWeight.bold),
-          ),
         ),
         Categories(),
       ],
