@@ -47,27 +47,32 @@ class __CategoriesState extends State<Categories> {
   }
 
   Widget buildCategory(int index) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: defaultPadding,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(
-            categories[index],
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: selectedIndex == index ? textColor : textLightColor,
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          selectedIndex = index;
+        });
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              categories[index],
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: selectedIndex == index ? textColor : textLightColor,
+              ),
             ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: defaultPadding / 4),
-            height: 2,
-            width: 30,
-            color: selectedIndex == index ? Colors.black : Colors.transparent,
-          )
-        ],
+            Container(
+              margin: EdgeInsets.only(top: defaultPadding / 4),
+              height: 2,
+              width: 30,
+              color: selectedIndex == index ? Colors.black : Colors.transparent,
+            )
+          ],
+        ),
       ),
     );
   }
