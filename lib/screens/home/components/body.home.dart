@@ -10,25 +10,71 @@ class Body extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: defaultPadding,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
         ),
         Categories(),
-        Column(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(defaultPadding),
-              height: 160,
-              width: 140,
-              decoration: BoxDecoration(
-                color: products[0].color,
-                borderRadius: BorderRadius.circular(15),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+            child: GridView.builder(
+              itemCount: products.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: defaultPadding,
+                crossAxisSpacing: defaultPadding,
+                childAspectRatio: 0.85,
               ),
-              child: Image.asset(products[0].image),
+              itemBuilder: (context, index) => ItemCard(
+                product: products[index],
+              ),
             ),
-          ],
+          ),
         ),
+      ],
+    );
+  }
+}
+
+class ItemCard extends StatelessWidget {
+  final Product product;
+  final Function press;
+
+  const ItemCard({
+    Key key,
+    this.product,
+    this.press,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Expanded(
+          child: Container(
+            padding: EdgeInsets.all(defaultPadding),
+            decoration: BoxDecoration(
+              color: product.color,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Image.asset(products[0].image),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: defaultPadding / 4),
+          child: Text(
+            product.title,
+            style: TextStyle(
+              color: textLightColor,
+            ),
+          ),
+        ),
+        Text(
+          "\$${product.price}",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        )
       ],
     );
   }
