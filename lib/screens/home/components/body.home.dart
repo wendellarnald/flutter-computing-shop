@@ -13,15 +13,32 @@ class Body extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
         ),
         Categories(),
-        ItemCard(),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+            child: GridView.builder(
+              itemCount: products.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 0.85,
+              ),
+              itemBuilder: (context, index) => ItemCard(),
+            ),
+          ),
+        ),
       ],
     );
   }
 }
 
 class ItemCard extends StatelessWidget {
+  final Product product;
+  final Function press;
+
   const ItemCard({
     Key key,
+    this.product,
+    this.press,
   }) : super(key: key);
 
   @override
