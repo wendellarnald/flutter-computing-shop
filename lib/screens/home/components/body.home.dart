@@ -13,29 +13,47 @@ class Body extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
         ),
         Categories(),
-        Column(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(defaultPadding),
-              height: 160,
-              width: 140,
-              decoration: BoxDecoration(
-                color: products[0].color,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Image.asset(products[0].image),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: defaultPadding / 4),
-              child: Text(
-                products[0].title,
-                style: TextStyle(
-                  color: textLightColor,
-                ),
-              ),
-            ),
-          ],
+        ItemCard(),
+      ],
+    );
+  }
+}
+
+class ItemCard extends StatelessWidget {
+  const ItemCard({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.all(defaultPadding),
+          height: 160,
+          width: 140,
+          decoration: BoxDecoration(
+            color: products[0].color,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Image.asset(products[0].image),
         ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: defaultPadding / 4),
+          child: Text(
+            products[0].title,
+            style: TextStyle(
+              color: textLightColor,
+            ),
+          ),
+        ),
+        Text(
+          "\$234",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        )
       ],
     );
   }
