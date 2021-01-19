@@ -20,6 +20,8 @@ class Body extends StatelessWidget {
               itemCount: products.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
+                mainAxisSpacing: defaultPadding,
+                crossAxisSpacing: defaultPadding,
                 childAspectRatio: 0.85,
               ),
               itemBuilder: (context, index) => ItemCard(),
@@ -48,8 +50,6 @@ class ItemCard extends StatelessWidget {
       children: <Widget>[
         Container(
           padding: EdgeInsets.all(defaultPadding),
-          height: 160,
-          width: 140,
           decoration: BoxDecoration(
             color: products[0].color,
             borderRadius: BorderRadius.circular(15),
