@@ -24,7 +24,9 @@ class Body extends StatelessWidget {
                 crossAxisSpacing: defaultPadding,
                 childAspectRatio: 0.85,
               ),
-              itemBuilder: (context, index) => ItemCard(),
+              itemBuilder: (context, index) => ItemCard(
+                product: products[index],
+              ),
             ),
           ),
         ),
@@ -48,25 +50,27 @@ class ItemCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Container(
-          padding: EdgeInsets.all(defaultPadding),
-          decoration: BoxDecoration(
-            color: products[0].color,
-            borderRadius: BorderRadius.circular(15),
+        Expanded(
+          child: Container(
+            padding: EdgeInsets.all(defaultPadding),
+            decoration: BoxDecoration(
+              color: product.color,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Image.asset(products[0].image),
           ),
-          child: Image.asset(products[0].image),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding / 4),
           child: Text(
-            products[0].title,
+            product.title,
             style: TextStyle(
               color: textLightColor,
             ),
           ),
         ),
         Text(
-          "\$234",
+          "\$${product.price}",
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
