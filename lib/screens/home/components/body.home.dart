@@ -10,9 +10,7 @@ class Body extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: defaultPadding,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
         ),
         Categories(),
         Column(
@@ -26,6 +24,15 @@ class Body extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Image.asset(products[0].image),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: defaultPadding / 4),
+              child: Text(
+                products[0].title,
+                style: TextStyle(
+                  color: textLightColor,
+                ),
+              ),
             ),
           ],
         ),
