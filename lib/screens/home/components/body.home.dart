@@ -57,7 +57,7 @@ class ItemCard extends StatelessWidget {
               color: product.color,
               borderRadius: BorderRadius.circular(15),
             ),
-            child: Image.asset(products[0].image),
+            child: Image.asset(product.image),
           ),
         ),
         Padding(
