@@ -56,4 +56,42 @@ List<Product> products = [
     image: "assets/images/MousePad.png",
     color: Colors.grey,
   ),
+  Product(
+    id: 2,
+    title: "Keyboard Gaming MATRICS Stealth",
+    price: 25,
+    size: 40,
+    description:
+        "Keyboard Gaming MATRICS Stealth (Mechanical - Portuguese Language - RGB)",
+    image: "assets/images/Keyboard.png",
+    color: Colors.grey,
+  ),
+  Product(
+    id: 2,
+    title: "VR Headset Virtual KLACK®",
+    price: 13,
+    size: 20,
+    description: "VR Headset Virtual KLACK® T00306 Apple Android",
+    image: "assets/images/VR.png",
+    color: Colors.grey,
+  ),
+  Product(
+    id: 2,
+    title: "Gaming Chair ALPHA GAMER Sírius",
+    price: 164,
+    size: 50,
+    description:
+        "Gaming Chair ALPHA GAMER Sírius (Up to 130 kg - Class 4 Lift - Red",
+    image: "assets/images/Chair.png",
+    color: Colors.grey,
+  ),
+  Product(
+    id: 2,
+    title: "Gaming Table NPLAY Command 2.0",
+    price: 117,
+    size: 120,
+    description: "Mesa Gaming NPLAY Command 2.0",
+    image: "assets/images/Table.png",
+    color: Colors.grey,
+  ),
 ];
