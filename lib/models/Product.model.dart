@@ -56,4 +56,23 @@ List<Product> products = [
     image: "assets/images/MousePad.png",
     color: Colors.grey,
   ),
+  Product(
+    id: 2,
+    title: "Keyboard Gaming MATRICS Stealth",
+    price: 25,
+    size: 40,
+    description:
+        "Keyboard Gaming MATRICS Stealth (Mechanical - Portuguese Language - RGB)",
+    image: "assets/images/Keyboard.png",
+    color: Colors.grey,
+  ),
+  Product(
+    id: 2,
+    title: "VR Headset Virtual KLACK®",
+    price: 13,
+    size: 20,
+    description: "VR Headset Virtual KLACK® T00306 Apple Android",
+    image: "assets/images/VR.png",
+    color: Colors.grey,
+  ),
 ];
