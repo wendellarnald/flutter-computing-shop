@@ -75,4 +75,23 @@ List<Product> products = [
     image: "assets/images/VR.png",
     color: Colors.grey,
   ),
+  Product(
+    id: 2,
+    title: "Gaming Chair ALPHA GAMER Sírius",
+    price: 164,
+    size: 50,
+    description:
+        "Gaming Chair ALPHA GAMER Sírius (Up to 130 kg - Class 4 Lift - Red",
+    image: "assets/images/Chair.png",
+    color: Colors.grey,
+  ),
+  Product(
+    id: 2,
+    title: "Gaming Table NPLAY Command 2.0",
+    price: 117,
+    size: 120,
+    description: "Mesa Gaming NPLAY Command 2.0",
+    image: "assets/images/Table.png",
+    color: Colors.grey,
+  ),
 ];
