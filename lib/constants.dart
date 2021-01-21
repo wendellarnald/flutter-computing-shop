@@ -10,5 +10,9 @@ List<String> defaultCategories = [
   "Desktop",
   "Head Phones",
   "Mouse Pad",
-  "Screen"
+  "Screen",
+  "Keyboard",
+  "Chair",
+  "Table",
+  "VR",
 ];
