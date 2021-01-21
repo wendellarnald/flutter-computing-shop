@@ -11,6 +11,11 @@ class DetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: product.color,
+      appBar: AppBar(
+        backgroundColor: product.color,
+      ),
+    );
   }
 }
