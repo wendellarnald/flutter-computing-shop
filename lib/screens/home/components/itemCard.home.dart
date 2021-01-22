@@ -25,6 +25,10 @@ class ItemCard extends StatelessWidget {
               decoration: BoxDecoration(
                 color: product.color,
                 borderRadius: BorderRadius.circular(15),
+                border: Border.all(
+                  color: Colors.grey[200],
+                  width: 2.0,
+                ),
               ),
               child: Image.asset(product.image),
             ),

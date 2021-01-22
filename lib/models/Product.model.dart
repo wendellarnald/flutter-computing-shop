@@ -1,3 +1,4 @@
+import 'package:computing_shop/constants.dart';
 import 'package:flutter/material.dart';
 
 class Product {
@@ -25,7 +26,7 @@ List<Product> products = [
     description:
         "Monitor Gaming AOC 24G2U/BK (24'' - 1 ms - 144 Hz - IPS - FreeSync)",
     image: "assets/images/Screen.png",
-    color: Colors.grey,
+    color: primaryColor,
   ),
   Product(
     id: 2,
@@ -35,7 +36,7 @@ List<Product> products = [
     description:
         "Desktop Gaming LENOVO IdeaCentre G5 14IMB05 (Intel Core i7-10700 - NVIDIA GeForce GTX 1650 SUPER - RAM: 8 GB - 512 GB SSD PCIe)",
     image: "assets/images/Desktop.png",
-    color: Colors.grey,
+    color: primaryColor,
   ),
   Product(
     id: 2,
@@ -45,7 +46,7 @@ List<Product> products = [
     description:
         "Headphones Gaming HYPERX Cloud II (Wired - With Microphone - Red)",
     image: "assets/images/Headphones.png",
-    color: Colors.grey,
+    color: primaryColor,
   ),
   Product(
     id: 2,
@@ -54,7 +55,7 @@ List<Product> products = [
     size: 100,
     description: "Mouse Pad Gaming ASUS Rog Sheath XXL",
     image: "assets/images/MousePad.png",
-    color: Colors.grey,
+    color: primaryColor,
   ),
   Product(
     id: 2,
@@ -64,7 +65,7 @@ List<Product> products = [
     description:
         "Keyboard Gaming MATRICS Stealth (Mechanical - Portuguese Language - RGB)",
     image: "assets/images/Keyboard.png",
-    color: Colors.grey,
+    color: primaryColor,
   ),
   Product(
     id: 2,
@@ -73,7 +74,7 @@ List<Product> products = [
     size: 20,
     description: "VR Headset Virtual KLACK® T00306 Apple Android",
     image: "assets/images/VR.png",
-    color: Colors.grey,
+    color: primaryColor,
   ),
   Product(
     id: 2,
@@ -83,7 +84,7 @@ List<Product> products = [
     description:
         "Gaming Chair ALPHA GAMER Sírius (Up to 130 kg - Class 4 Lift - Red",
     image: "assets/images/Chair.png",
-    color: Colors.grey,
+    color: primaryColor,
   ),
   Product(
     id: 2,
@@ -92,6 +93,6 @@ List<Product> products = [
     size: 120,
     description: "Mesa Gaming NPLAY Command 2.0",
     image: "assets/images/Table.png",
-    color: Colors.grey,
+    color: primaryColor,
   ),
 ];
