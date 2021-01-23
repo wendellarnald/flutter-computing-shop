@@ -1,4 +1,5 @@
 import 'package:computing_shop/models/Product.model.dart';
+import 'package:computing_shop/screens/details/components/body.details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -17,17 +18,18 @@ class DetailsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: product.color,
       appBar: buildAppBar(context),
+      body: Body(product: product),
     );
   }
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: product.color,
-      elevation: 0,
+      elevation: 0.5,
       leading: IconButton(
         icon: SvgPicture.asset(
           "asset/icons/back.svg",
-          color: textColor,
+          color: Colors.black,
         ),
         onPressed: () => Navigator.pop(context),
       ),
