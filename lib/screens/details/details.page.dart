@@ -16,33 +16,38 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: product.color,
-      appBar: AppBar(
-        backgroundColor: product.color,
-        elevation: 0,
-        leading: IconButton(
+      appBar: buildAppBar(context),
+    );
+  }
+
+  AppBar buildAppBar(BuildContext context) {
+    return AppBar(
+      backgroundColor: product.color,
+      elevation: 0,
+      leading: IconButton(
+        icon: SvgPicture.asset(
+          "asset/icons/back.svg",
+          color: textColor,
+        ),
+        onPressed: () => Navigator.pop(context),
+      ),
+      actions: <Widget>[
+        IconButton(
           icon: SvgPicture.asset(
-            "asset/icons/back.svg",
+            "assets/icons/search.svg",
             color: textColor,
           ),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () {},
         ),
-        actions: <Widget>[
-          IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/search.svg",
-              color: textColor,
-            ),
-            onPressed: () {},
+        IconButton(
+          icon: SvgPicture.asset(
+            "assets/icons/cart.svg",
+            color: textColor,
           ),
-          IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/cart.svg",
-              color: textColor,
-            ),
-            onPressed: () {},
-          ),
-        ],
-      ),
+          onPressed: () {},
+        ),
+        SizedBox(width: defaultPadding / 2),
+      ],
     );
   }
 }
