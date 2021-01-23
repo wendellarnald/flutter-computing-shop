@@ -1,4 +1,5 @@
 import 'package:computing_shop/models/Product.model.dart';
+import 'package:computing_shop/screens/details/components/body.details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -16,33 +17,39 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: product.color,
-      appBar: AppBar(
-        backgroundColor: product.color,
-        elevation: 0,
-        leading: IconButton(
+      appBar: buildAppBar(context),
+      body: Body(product: product),
+    );
+  }
+
+  AppBar buildAppBar(BuildContext context) {
+    return AppBar(
+      backgroundColor: product.color,
+      elevation: 0.5,
+      leading: IconButton(
+        icon: SvgPicture.asset(
+          "asset/icons/back.svg",
+          color: Colors.black,
+        ),
+        onPressed: () => Navigator.pop(context),
+      ),
+      actions: <Widget>[
+        IconButton(
           icon: SvgPicture.asset(
-            "asset/icons/back.svg",
+            "assets/icons/search.svg",
             color: textColor,
           ),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () {},
         ),
-        actions: <Widget>[
-          IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/search.svg",
-              color: textColor,
-            ),
-            onPressed: () {},
+        IconButton(
+          icon: SvgPicture.asset(
+            "assets/icons/cart.svg",
+            color: textColor,
           ),
-          IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/cart.svg",
-              color: textColor,
-            ),
-            onPressed: () {},
-          ),
-        ],
-      ),
+          onPressed: () {},
+        ),
+        SizedBox(width: defaultPadding / 2),
+      ],
     );
   }
 }
