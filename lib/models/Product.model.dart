@@ -2,7 +2,7 @@ import 'package:computing_shop/constants.dart';
 import 'package:flutter/material.dart';
 
 class Product {
-  final String image, title, description;
+  final String image, title, description, categorie;
   final int price, size, id;
   final Color color;
 
@@ -14,6 +14,7 @@ class Product {
     this.size,
     this.id,
     this.color,
+    this.categorie,
   });
 }
 
@@ -27,6 +28,7 @@ List<Product> products = [
         "Monitor Gaming AOC 24G2U/BK (24'' - 1 ms - 144 Hz - IPS - FreeSync)",
     image: "assets/images/Screen.png",
     color: primaryColor,
+    categorie: "Scrren",
   ),
   Product(
     id: 2,
@@ -37,6 +39,7 @@ List<Product> products = [
         "Desktop Gaming LENOVO IdeaCentre G5 14IMB05 (Intel Core i7-10700 - NVIDIA GeForce GTX 1650 SUPER - RAM: 8 GB - 512 GB SSD PCIe)",
     image: "assets/images/Desktop.png",
     color: primaryColor,
+    categorie: "Desktop",
   ),
   Product(
     id: 2,
@@ -47,6 +50,7 @@ List<Product> products = [
         "Headphones Gaming HYPERX Cloud II (Wired - With Microphone - Red)",
     image: "assets/images/Headphones.png",
     color: primaryColor,
+    categorie: "Headphones",
   ),
   Product(
     id: 2,
@@ -56,6 +60,7 @@ List<Product> products = [
     description: "Mouse Pad Gaming ASUS Rog Sheath XXL",
     image: "assets/images/MousePad.png",
     color: primaryColor,
+    categorie: "Mouse",
   ),
   Product(
     id: 2,
@@ -66,6 +71,7 @@ List<Product> products = [
         "Keyboard Gaming MATRICS Stealth (Mechanical - Portuguese Language - RGB)",
     image: "assets/images/Keyboard.png",
     color: primaryColor,
+    categorie: "Keyboard",
   ),
   Product(
     id: 2,
@@ -75,6 +81,7 @@ List<Product> products = [
     description: "VR Headset Virtual KLACK® T00306 Apple Android",
     image: "assets/images/VR.png",
     color: primaryColor,
+    categorie: "VR",
   ),
   Product(
     id: 2,
@@ -85,6 +92,7 @@ List<Product> products = [
         "Gaming Chair ALPHA GAMER Sírius (Up to 130 kg - Class 4 Lift - Red",
     image: "assets/images/Chair.png",
     color: primaryColor,
+    categorie: "Chair",
   ),
   Product(
     id: 2,
@@ -94,5 +102,6 @@ List<Product> products = [
     description: "Mesa Gaming NPLAY Command 2.0",
     image: "assets/images/Table.png",
     color: primaryColor,
+    categorie: "Table",
   ),
 ];
