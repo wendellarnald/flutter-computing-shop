@@ -50,6 +50,39 @@ class Body extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                       ),
+                      SizedBox(height: defaultPadding),
+                      Row(
+                        children: <Widget>[
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                    text: "Price\n",
+                                    style: TextStyle(
+                                      color: textColor,
+                                    )),
+                                TextSpan(
+                                  text: "\$${product.price}",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline4
+                                      .copyWith(
+                                        color: textColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(width: defaultPadding),
+                          Expanded(
+                            child: Image.asset(
+                              product.image,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ],
+                      )
                     ],
                   ),
                 ),
