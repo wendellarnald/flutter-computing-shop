@@ -1,4 +1,3 @@
-import 'package:computing_shop/constants.dart';
 import 'package:computing_shop/models/Product.model.dart';
 import 'package:flutter/material.dart';
 
@@ -29,61 +28,6 @@ class Body extends StatelessWidget {
                       topLeft: Radius.circular(25),
                       topRight: Radius.circular(25),
                     ),
-                  ),
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: defaultPadding),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        product.categorie,
-                        style: TextStyle(
-                          color: Colors.grey[600],
-                        ),
-                      ),
-                      Text(
-                        product.title,
-                        style: Theme.of(context).textTheme.headline6.copyWith(
-                              color: textColor,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                      SizedBox(height: defaultPadding),
-                      Row(
-                        children: <Widget>[
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                    text: "Price\n",
-                                    style: TextStyle(
-                                      color: textColor,
-                                    )),
-                                TextSpan(
-                                  text: "\$${product.price}",
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline4
-                                      .copyWith(
-                                        color: textColor,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(width: defaultPadding),
-                          Expanded(
-                            child: Image.asset(
-                              product.image,
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
                   ),
                 ),
               ],
