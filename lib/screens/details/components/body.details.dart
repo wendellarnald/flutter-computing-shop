@@ -1,4 +1,5 @@
 import 'package:computing_shop/models/Product.model.dart';
+import 'package:computing_shop/screens/details/components/product.details.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -30,6 +31,7 @@ class Body extends StatelessWidget {
                     ),
                   ),
                 ),
+                ProductTitleWIthImage(product: product),
               ],
             ),
           ),
