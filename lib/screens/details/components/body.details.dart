@@ -40,21 +40,6 @@ class Body extends StatelessWidget {
                     children: <Widget>[
                       Row(
                         children: <Widget>[
-                          Column(
-                            children: <Widget>[
-                              Text("Color"),
-                              Container(
-                                margin: EdgeInsets.only(
-                                  top: defaultPadding / 4,
-                                  right: defaultPadding / 2,
-                                ),
-                                padding: EdgeInsets.all(2.5),
-                                height: 24,
-                                width: 24,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                    color: Colors.white,
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,18 +71,12 @@ class Body extends StatelessWidget {
                                         .headline5
                                         .copyWith(fontWeight: FontWeight.bold),
                                   ),
-                                ),
-                                child: DecoratedBox(
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.black,
-                                  ),
-                                ),
+                                ],
                               ),
-                            ],
-                          )
+                            ),
+                          ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
