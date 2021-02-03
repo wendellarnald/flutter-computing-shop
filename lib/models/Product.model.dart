@@ -60,7 +60,7 @@ List<Product> products = [
     description: "Mouse Pad Gaming ASUS Rog Sheath XXL",
     image: "assets/images/MousePad.png",
     color: primaryColor,
-    categorie: "Mouse",
+    categorie: "MousePad",
   ),
   Product(
     id: 2,
