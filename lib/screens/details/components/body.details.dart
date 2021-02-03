@@ -39,6 +39,7 @@ class Body extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       ColorAndSize(product: product),
+                      Description(product: product),
                     ],
                   ),
                 ),
@@ -58,6 +59,7 @@ class ColorAndSize extends StatelessWidget {
     @required this.product,
   }) : super(key: key);
 
+class Description extends StatelessWidget {
   final Product product;
 
   @override
@@ -109,9 +111,11 @@ class ColorDot extends StatelessWidget {
   final bool isSelected;
 
   const ColorDot({
+  const Description({
     Key key,
     this.color,
     this.isSelected = false,
+    @required this.product,
   }) : super(key: key);
 
   @override
@@ -129,12 +133,18 @@ class ColorDot extends StatelessWidget {
         border: Border.all(
           color: isSelected ? color : Colors.transparent,
         ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        vertical: defaultPadding,
       ),
       child: DecoratedBox(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: color,
         ),
+      child: Text(
+        product.description,
+        style: TextStyle(height: 1.5),
       ),
     );
   }
