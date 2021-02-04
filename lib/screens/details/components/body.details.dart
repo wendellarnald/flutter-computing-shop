@@ -2,6 +2,7 @@ import 'package:computing_shop/constants.dart';
 import 'package:computing_shop/models/Product.model.dart';
 import 'package:computing_shop/screens/details/components/cartCounter.details.dart';
 import 'package:computing_shop/screens/details/components/colorSize.details.dart';
+import 'package:computing_shop/screens/details/components/counterWithFav.details.dart';
 import 'package:computing_shop/screens/details/components/description.details.dart';
 import 'package:computing_shop/screens/details/components/product.details.dart';
 import 'package:flutter/material.dart';
@@ -54,32 +55,6 @@ class Body extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class CounterWithFavBtn extends StatelessWidget {
-  const CounterWithFavBtn({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        CartCounter(),
-        Container(
-          padding: EdgeInsets.all(8),
-          height: 32,
-          width: 32,
-          decoration: BoxDecoration(
-            color: Colors.red,
-            shape: BoxShape.circle,
-          ),
-          child: SvgPicture.asset("assets/icons/heart.svg"),
-        ),
-      ],
     );
   }
 }
