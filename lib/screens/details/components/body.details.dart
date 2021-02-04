@@ -1,6 +1,7 @@
 import 'package:computing_shop/constants.dart';
 import 'package:computing_shop/models/Product.model.dart';
 import 'package:computing_shop/screens/details/components/colorSize.details.dart';
+import 'package:computing_shop/screens/details/components/description.details.dart';
 import 'package:computing_shop/screens/details/components/product.details.dart';
 import 'package:flutter/material.dart';
 
@@ -41,6 +42,7 @@ class Body extends StatelessWidget {
                     children: <Widget>[
                       ColorAndSize(product: product),
                       Description(product: product),
+                      CartCounter(),
                     ],
                   ),
                 ),
@@ -54,23 +56,60 @@ class Body extends StatelessWidget {
   }
 }
 
-class Description extends StatelessWidget {
-  final Product product;
+class CartCounter extends StatefulWidget {
+  @override
+  _CartCounterState createState() => _CartCounterState();
+}
 
-  const Description({
-    Key key,
-    @required this.product,
-  }) : super(key: key);
+class _CartCounterState extends State<CartCounter> {
+  int numberOfItems = 1;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: defaultPadding,
-      ),
-      child: Text(
-        product.description,
-        style: TextStyle(height: 1.5),
+    return Row(
+      children: [
+        buildOutLineButton(
+          icon: Icons.remove,
+          press: () {
+            if (numberOfItems > 1) {
+              setState(
+                () {
+                  numberOfItems--;
+                },
+              );
+            }
+          },
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+          child: Text(
+            numberOfItems.toString().padLeft(2, "0"),
+            style: Theme.of(context).textTheme.headline6,
+          ),
+        ),
+        buildOutLineButton(
+          icon: Icons.add,
+          press: () {
+            setState(() {
+              numberOfItems++;
+            });
+          },
+        ),
+      ],
+    );
+  }
+
+  SizedBox buildOutLineButton({IconData icon, Function press}) {
+    return SizedBox(
+      width: 40,
+      height: 32,
+      child: OutlineButton(
+        padding: EdgeInsets.zero,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(13),
+        ),
+        onPressed: press,
+        child: Icon(icon),
       ),
     );
   }
