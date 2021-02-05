@@ -44,53 +44,12 @@ class Body extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       ColorAndSize(product: product),
+                      SizedBox(height: defaultPadding / 2),
                       Description(product: product),
+                      SizedBox(height: defaultPadding / 2),
                       CounterWithFavBtn(),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: defaultPadding),
-                        child: Row(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(right: defaultPadding),
-                              height: 50,
-                              width: 58,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(18),
-                                border: Border.all(
-                                  color: product.color,
-                                ),
-                              ),
-                              child: IconButton(
-                                icon: SvgPicture.asset(
-                                  "assets/icons/add_to_cart.svg",
-                                  color: product.color,
-                                ),
-                                onPressed: () {},
-                              ),
-                            ),
-                            Expanded(
-                              child: SizedBox(
-                                height: 50,
-                                child: FlatButton(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18),
-                                  ),
-                                  color: product.color,
-                                  onPressed: () {},
-                                  child: Text(
-                                    "Buy Now".toUpperCase(),
-                                    style: TextStyle(
-                                      fontSize: 17,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      )
+                      SizedBox(height: defaultPadding / 2),
+                      AddToCart(product: product)
                     ],
                   ),
                 ),
@@ -98,6 +57,63 @@ class Body extends StatelessWidget {
               ],
             ),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class AddToCart extends StatelessWidget {
+  const AddToCart({
+    Key key,
+    @required this.product,
+  }) : super(key: key);
+
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+      child: Row(
+        children: [
+          Container(
+            margin: EdgeInsets.only(right: defaultPadding),
+            height: 50,
+            width: 58,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(
+                color: product.color,
+              ),
+            ),
+            child: IconButton(
+              icon: SvgPicture.asset(
+                "assets/icons/add_to_cart.svg",
+                color: product.color,
+              ),
+              onPressed: () {},
+            ),
+          ),
+          Expanded(
+            child: SizedBox(
+              height: 50,
+              child: FlatButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18),
+                ),
+                color: product.color,
+                onPressed: () {},
+                child: Text(
+                  "Buy Now".toUpperCase(),
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
