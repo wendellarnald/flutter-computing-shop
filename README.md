@@ -2,6 +2,8 @@
 
 Create a shop layout with gamer items.
 
+In this app we have a main screen with all products and a screen with specifications, price and product information.
+
 ## Author
 
 * **Wendell Arnald Ribeiro** - *Software developer*
